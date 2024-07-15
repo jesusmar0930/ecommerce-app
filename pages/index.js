@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Product from "../components/Product";
 import dbConnect from "../lib/mongoose";
 import ProductModel from "../models/Product";
 import Layout from "../components/Layout";
+import { ProductsContext } from "../components/ProductsContext";
 
 export default function Home({ initialProducts, error }) {
   const [products, setProducts] = useState(initialProducts);
   const [phrase, setPhrase] = useState('');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+  const { setSelectedProducts } = useContext(ProductsContext);
 
   useEffect(() => {
     if (page > 1) {
@@ -26,6 +28,10 @@ export default function Home({ initialProducts, error }) {
       console.error('Error fetching more products:', error);
     }
     setLoading(false);
+  };
+
+  const addProduct = (productId) => {
+    setSelectedProducts(prev => [...prev, productId]);
   };
 
   if (error) {
@@ -83,15 +89,7 @@ export default function Home({ initialProducts, error }) {
           </div>
         ))}
       </div>
-      {!phrase && (
-        <button 
-          onClick={() => setPage(prev => prev + 1)} 
-          disabled={loading}
-          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
-        >
-          {loading ? 'Loading...' : 'Load More'}
-        </button>
-      )}
+      
     </Layout>
   )
 }
