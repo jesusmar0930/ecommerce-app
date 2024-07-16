@@ -41,3 +41,7 @@ npm run dev
 
 2. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
+## Demo Images
+![ecommerce_demo_image1](https://github.com/user-attachments/assets/037453f9-871c-4021-93a1-339ba6ebd26a)
+
+
