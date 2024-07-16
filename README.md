@@ -1,4 +1,4 @@
-![ecommerce_demo_image5](https://github.com/user-attachments/assets/07c70039-5619-4d63-b9c7-63eded6b3b00)# E-commerce Project
+# E-commerce Project
 
 ## Description
 This is a full-stack e-commerce application built with Next.js, MongoDB, and Stripe. It features a responsive design, product categorization, shopping cart functionality, and a secure checkout process.
