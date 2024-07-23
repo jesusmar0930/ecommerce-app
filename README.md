@@ -2,6 +2,7 @@
 
 ## Description
 This is a full-stack e-commerce application built with Next.js, MongoDB, and Stripe. It features a responsive design, product categorization, shopping cart functionality, and a secure checkout process.
+Video Demo: https://www.youtube.com/watch?v=eERIsK9heOM
 
 ## Features
 - Responsive design 
